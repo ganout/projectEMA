@@ -1,0 +1,40 @@
+* {
+    margin : 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.thumbails {
+    width: 500px;
+    height: 249.5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "photo infos";
+  }
+  
+.photo { grid-area: photo; }
+
+img {
+    max-width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.infos {
+    grid-area: infos;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "one" "two" "three" "four";
+  }
+  
+.one { grid-area: one; }
+
+.two { grid-area: two; }
+
+.three { grid-area: three; }
+
+.four { grid-area: four; }

@@ -2,7 +2,7 @@ package com.wildcodeschool.projectEMA.Entity;
 
 import java.util.List;
 
-public class Character {
+public class CharacterAPI {
 
     
 private Integer id;
@@ -14,12 +14,12 @@ private String gender;
 private Origin origin;
 private Location location;
 private String image;
-private List<Episode> episode;
+private List<String> episode;
 private String url;
 private String created; 
 
 
-    public Character() {
+    public CharacterAPI() {
     }
 
 
@@ -95,11 +95,11 @@ private String created;
         this.image = image;
     }
 
-    public List<Episode> getEpisode() {
+    public List<String> getEpisode() {
         return this.episode;
     }
 
-    public void setEpisode(List<Episode> episode) {
+    public void setEpisode(List<String> episode) {
         this.episode = episode;
     }
 

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
     <title>The Rick and Morty</title>
 </head>
 <body>
@@ -10,7 +11,28 @@
         <h1>Welcome to The Rick and Morty API</h1>
         <div class="container-thumbnails">
             <div class="thumbails" th:object="${character}">
-                <h1 th:text="*{name}"></h1>                
+                <div class="photo">
+                    <img th:src="*{image}" alt="*{name}">
+                </div>
+                <ul class="infos">
+                    <li class="one">
+                        <h1 th:text="*{name}"></h1>
+                    </li>
+                    <li class="two">
+                        <div th:text="*{status == 'Alive'} ? 'true' : 'false'"></div>
+                        <h3 th:text="*{status}">Dead or Alive</h3>
+                        <p th:text="*{species}">Human or not</p>
+                    </li>
+                    <li class="three">
+                        <h3>Last known location :</h3>
+                        <p th:text="*{location.getName()}">Location</p>
+                    </li>
+                    <li class="four">
+                        <h3>First seen in :</h3>
+                        <a th:href="*{episode.get(0)}">Close Rick-counters of the Rick Kind</a>
+                    </li>
+                </ul>
+                </div>        
             </div>
         </div>
     </main>
